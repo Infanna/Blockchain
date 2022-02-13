@@ -13,26 +13,29 @@ Genesus_block = (hashlib.sha256("Genesus_block".encode())).hexdigest()
 print("Genesus_block", Genesus_block)
 Chain = [Genesus_block]
 
+def Hash(data) :
+    return (hashlib.sha256(str(data).encode())).hexdigest()
+
 def Create_Block(Prev_Hash,Tx) :
-    Team1 = (hashlib.sha256(Tx[0].encode())).hexdigest()
-    Score1 = (hashlib.sha256(Tx[1].encode())).hexdigest()
-    TS1 = (hashlib.sha256((Team1+Score1).encode())).hexdigest()
+    Team1 = Hash(Tx[0])
+    Score1 = Hash(Tx[1])
+    TS1 = Hash(Team1+Score1)
 
-    Team2 = (hashlib.sha256(Tx[2].encode())).hexdigest()
-    Score2 = (hashlib.sha256(Tx[3].encode())).hexdigest()
-    TS2 = (hashlib.sha256((Team2+Score2).encode())).hexdigest()
+    Team2 = Hash(Tx[2])
+    Score2 = Hash(Tx[3])
+    TS2 = Hash(Team2+Score2)
 
-    Results = (hashlib.sha256((TS1+TS2).encode())).hexdigest()
+    Results = Hash(TS1+TS2)
 
-    time_start = (hashlib.sha256(Tx[4].encode())).hexdigest()
-    time_stop = (hashlib.sha256(Tx[5].encode())).hexdigest()
-    time = (hashlib.sha256((time_start+time_stop).encode())).hexdigest()
+    time_start = Hash(Tx[4])
+    time_stop = Hash(Tx[5])
+    time = Hash(time_start+time_stop)
 
-    Tx_Root = (hashlib.sha256((Results+time).encode())).hexdigest()
+    Tx_Root = Hash(Results+time)
 
-    Index = (hashlib.sha256(str((len(Chain))).encode())).hexdigest()
+    Index = Hash(str((len(Chain))))
 
-    Prev_Hash = (hashlib.sha256((Tx_Root+Prev_Hash+Index).encode())).hexdigest()
+    Prev_Hash = Hash(Tx_Root+Prev_Hash+Index)
 
     Chain.append(Prev_Hash)
 
@@ -41,25 +44,25 @@ def Create_Block(Prev_Hash,Tx) :
 
 def Check(Prev_Hash,Prev_Hash_Check,Index,Tx):
 
-    Team1 = (hashlib.sha256(Tx[0].encode())).hexdigest()
-    Score1 = (hashlib.sha256(Tx[1].encode())).hexdigest()
-    TS1 = (hashlib.sha256((Team1+Score1).encode())).hexdigest()
+    Team1 = Hash(Tx[0])
+    Score1 = Hash(Tx[1])
+    TS1 = Hash(Team1+Score1)
 
-    Team2 = (hashlib.sha256(Tx[2].encode())).hexdigest()
-    Score2 = (hashlib.sha256(Tx[3].encode())).hexdigest()
-    TS2 = (hashlib.sha256((Team2+Score2).encode())).hexdigest()
+    Team2 = Hash(Tx[2])
+    Score2 = Hash(Tx[3])
+    TS2 = Hash(Team2+Score2)
 
-    Results = (hashlib.sha256((TS1+TS2).encode())).hexdigest()
+    Results = Hash(TS1+TS2)
 
-    time_start = (hashlib.sha256(Tx[4].encode())).hexdigest()
-    time_stop = (hashlib.sha256(Tx[5].encode())).hexdigest()
-    time = (hashlib.sha256((time_start+time_stop).encode())).hexdigest()
+    time_start = Hash(Tx[4])
+    time_stop = Hash(Tx[5])
+    time = Hash(time_start+time_stop)
 
-    Tx_Root = (hashlib.sha256((Results+time).encode())).hexdigest()
+    Tx_Root = Hash(Results+time)
 
-    Index = (hashlib.sha256(str(Index).encode())).hexdigest()
+    Index = Hash(str(Index))
 
-    Prev_Hash = (hashlib.sha256((Tx_Root+Prev_Hash+Index).encode())).hexdigest()
+    Prev_Hash = Hash(Tx_Root+Prev_Hash+Index)
 
     if Prev_Hash == Prev_Hash_Check :
         return "OK"
