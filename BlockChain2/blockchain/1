@@ -1,0 +1,13 @@
+{
+    "group": "G",
+    "number": 0,
+    "team1": "Genesus",
+    "team2": "Genesus",
+    "score1": 0,
+    "score2": 0,
+    "data_hash": "0",
+    "prev_block": {
+        "hash": "0",
+        "filename": "0"
+    }
+}

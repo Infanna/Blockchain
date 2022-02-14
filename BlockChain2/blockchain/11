@@ -1,0 +1,13 @@
+{
+    "group": "D",
+    "number": 1,
+    "team1": "MAD Lions",
+    "team2": "Gen.G Esports",
+    "score1": 1,
+    "score2": 0,
+    "prev_block": {
+        "hash": "355b3c3b882b0d30d68423cb7674b0dc065aad1d260a7522e6c0295388e5e36f",
+        "filename": "10"
+    },
+    "block_header": "d2407d42ab50bc744eb574d96f3e266179a727b73e83b0177507583b3e4937a4"
+}

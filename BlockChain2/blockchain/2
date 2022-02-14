@@ -1,0 +1,13 @@
+{
+    "group": "A",
+    "number": 1,
+    "team1": "Rogue",
+    "team2": "DAMWON Gaming",
+    "score1": 0,
+    "score2": 1,
+    "prev_block": {
+        "hash": "9a78437d5e0ad9a9a25029c1a32de7cfcdd30ad585135fc63cb32f6ef7e546fd",
+        "filename": "1"
+    },
+    "block_header": "30498a81494b939d8eeb06cb1bef98db441d2144e40ecf64119824a1d4c7b70d"
+}

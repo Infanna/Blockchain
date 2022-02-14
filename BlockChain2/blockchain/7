@@ -1,0 +1,13 @@
+{
+    "group": "B",
+    "number": 3,
+    "team1": "EDward Gaming",
+    "team2": "100 Thieves",
+    "score1": 1,
+    "score2": 0,
+    "prev_block": {
+        "hash": "b46b29e3eaec1556e9a10eed33f7a4d93d4fd669c41bcee621d37437a2df1097",
+        "filename": "6"
+    },
+    "block_header": "ef8be32d9be557bf72a180e7b93aa8acd772da6e5af41fabbb690e38e7987198"
+}

@@ -1,0 +1,12 @@
+{
+    "group": "A",
+    "number": 1,
+    "team1": "T1",
+    "team2": "T2",
+    "score1": 3,
+    "score2": 2,
+    "prev_block": {
+        "hash": "544562a722f1c86a7452639ef5217f566c4b4107c3d9b771d3085fe1c72790ce",
+        "filename": "1"
+    }
+}
