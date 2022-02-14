@@ -1,0 +1,13 @@
+{
+    "group": "semifinals",
+    "number": 0,
+    "team1": "T1",
+    "team2": "Cloud9",
+    "score1": 3,
+    "score2": 2,
+    "prev_block": {
+        "hash": "03aaa44fa005ee489977ada7c3ed18aec749c142a0f97ed50a4631911d70d6a3",
+        "filename": "13"
+    },
+    "block_header": "9c5333bba8a74e1d7054db62abc934c9d2bcdecc31b8b39bb05e028f8ace1ae4"
+}

@@ -1,10 +1,7 @@
-from ast import Pass
-from base64 import encode
-from cgitb import reset
 import json
 import os
 import hashlib
-from tokenize import Special
+
 
 BLOCKCHAIN_DIR = 'BlockChain2/blockchain/'
 
@@ -156,15 +153,15 @@ def main():
     while len(os.listdir(BLOCKCHAIN_DIR)) < 10 :
         write_block(group="A", number=1, team1="Rogue", team2="DAMWON Gaming", score1=0, score2=1)
         write_block(group="A", number=2, team1="Cloud9 ", team2="FunPlus Phoenix", score1=0, score2=1)
-        write_block(group="A", number=3, team1="DAMWON Gaming", team2="FunPlus Phoenix", score1=1, score2=0)
         write_block(group="B", number=1, team1="T1", team2="EDward Gaming", score1=0, score2=1)
         write_block(group="B", number=2, team1="DetonatioN FocusMe", team2="100 Thieves", score1=0, score2=1)
-        write_block(group="B", number=3, team1="EDward Gaming", team2="100 Thieves", score1=1, score2=0)
         write_block(group="C", number=1, team1="PSG Talon", team2="Hanwha Life Esports", score1=1, score2=0)
         write_block(group="C", number=2, team1="Fnatic", team2="Royal Never Give Up", score1=0, score2=1)
-        write_block(group="C", number=3, team1="PSG Talon", team2="Royal Never Give Up", score1=1, score2=0)
         write_block(group="D", number=1, team1="MAD Lions", team2="Gen.G Esports", score1=1, score2=0)
         write_block(group="D", number=2, team1="Team Liquid", team2="LNG Esports", score1=0, score2=1)
+        write_block(group="A", number=3, team1="DAMWON Gaming", team2="FunPlus Phoenix", score1=1, score2=0)
+        write_block(group="B", number=3, team1="EDward Gaming", team2="100 Thieves", score1=1, score2=0)
+        write_block(group="C", number=3, team1="PSG Talon", team2="Royal Never Give Up", score1=1, score2=0)
         write_block(group="D", number=3, team1="MAD Lions", team2="LNG Esports", score1=1, score2=0)
 
 
@@ -248,10 +245,10 @@ if __name__ == '__main__':
                     for k in range(54) :
                         print("=",end="")
 
-                    print(f"\n|| %-2s %22s %s %-20s %8s" % ("No." ,"Team1" ,"Score" ,"Team2" ,"||"),end="")
+                    print(f"\n|| %-3s %22s %s %-23s %5s" % ("No." ,"Team1" ,"Score" ,"Team2" ,"||"),end="")
                     
                     for i in F:
-                        print(f"\n|| %-2d %23s %2d-%-2d %-20s %8s" % (i[1] ,i[2] ,i[4] ,i[5] ,i[3] ,"||"),end="")
+                        print(f"\n|| %-2d %23s %2d-%-2d %-25s %3s" % (i[1] ,i[2] ,i[4] ,i[5] ,i[3] ,"||"),end="")
 
                     print('')
                     for k in range(65) :
@@ -263,16 +260,15 @@ if __name__ == '__main__':
                     for k in range(0,48) :
                         print("=",end="")
 
-                    print(f"\n|| %31s %s %-18s %5s" % ("Team1" ,"Score" ,"Team2" ,"||"),end="")
+                    print(f"\n|| %-5s %20s %s %-23s %5s" % ("Round","Team1" ,"Score" ,"Team2" ,"||"),end="")
 
                     for i in S:
-                        print(f"\n|| %-12s %18s %2d-%-2d %-18s %5s" % (i[0] ,i[2] ,i[4] ,i[5] ,i[3] ,"||"),end="")
+                        print(f"\n|| %-10s %15s %2d-%-2d %-25s %3s" % (i[0] ,i[2] ,i[4] ,i[5] ,i[3] ,"||"),end="")
 
                     print('')
                     for k in range(65) :
                         print("=",end="")
                     print('')
-
 
         else :
             print("No option")
