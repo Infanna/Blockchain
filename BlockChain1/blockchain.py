@@ -4,17 +4,17 @@ import hashlib
 print("----------------------------")
 
 Tx = [["PSG Talon","2","Hanwha Life Esports","0","15.00","17.30"],["Fnatic","0","Royal Never Give Up","2","15.00","17.30"],["A","0","B","2","15.00","17.30"]]#SQL
-# Tx1_fail = [["A","2","B","0","15.00","17.35"],["A","1","B","1","15.00","17.30"],["A","0","B","2","15.00","17.30"]]
-# Tx2_fail = [["A","2","B","0","15.00","17.30"],["A","1","B","5","15.00","17.30"],["A","0","B","2","15.00","17.30"]]
-# Tx3_fail = [["A","2","B","0","15.00","17.30"],["A","1","B","1","15.00","17.30"],["A","6","B","2","15.00","17.30"]]
+Tx1_fail = [["A","2","B","0","15.00","17.35"],["A","1","B","1","15.00","17.30"],["A","0","B","2","15.00","17.30"]]
+Tx2_fail = [["PSG Talon","2","Hanwha Life Esports","0","15.00","17.30"],["A","1","B","5","15.00","17.30"],["A","0","B","2","15.00","17.30"]]
+Tx3_fail = [["A","2","B","0","15.00","17.30"],["A","1","B","1","15.00","17.30"],["A","6","B","2","15.00","17.30"]]
 
 Chain = []
 Merkle_root_list = []
 
-# #=========check===========
-# Chain_check = []
-# Merkle_root_check = []
-# #=========check===========
+#=========check===========
+Chain_check = []
+Merkle_root_check = []
+#=========check===========
 
 def Hash(data) :
     return (hashlib.sha256(data.encode())).hexdigest()
@@ -58,38 +58,7 @@ def Create_Genesus_block():
     Chain.append(Create_Block(Hash("0"),Hash(str)))
     print(f"Create Block %d Succeed" % (len(Chain)-1))
 
-#=========check===========
 
-# def Create_Block_Check(Prev_Hash,Tx_Root) :
-    
-#     Index = Hash(str((len(Chain_check))))
-
-#     Prev_Hash = Hash(Tx_Root+Prev_Hash+Index)
-
-#     #Chain.append(Prev_Hash)
-
-#     return Prev_Hash
-#     #return f"Create Block %d Succeed" % (len(Chain)-1)
-
-# def Check_fail(Tx_Root ,Prev_Hash ,Index ,Prev_Hash_Check):
-#     #print("Index",Index)
-#     #print("Merkle_root_list_CH",Merkle_root_list[Index])
-    
-#     Indexs = Hash(str(Index))
-
-#     Prev_Hash = Hash(Tx_Root+Prev_Hash+Indexs)
-
-#     #print("Check",Prev_Hash,"=",Prev_Hash_Check)
-#     if Prev_Hash == Prev_Hash_Check :
-#         return "OK"
-#     else :
-#         return "Have fix"
-
-# def Create_Genesus_block_fail() :
-#     str = "Genesus_block"
-#     Merkle_root_check.append(Hash(str))
-#     Chain_check.append(Create_Block_Check(Hash("0"),Hash(str)))
-#     print(f"Create Block %d Succeed" % (len(Chain_check)-1))
 
 
 
@@ -111,24 +80,7 @@ def Check_All_Block() :
     return status
 
 
-# def Create_Tx2_fail():
-#     for k in range(0,len(Tx)):
-#         Merkle_root_check.append(Create_Merkle_Root(Tx[k]))
-#         Chain_check.append(Create_Block_Check(Chain_check[k] , Merkle_root_check[k+1]))
-#         print(f"Create Block %d Succeed" % (len(Chain_check)-1))
 
-
-# def Check_Tx2_fail():
-#     for l in range(0,len(Chain_check)):
-#         if l == 0 :
-#             status = Check_fail(Merkle_root_check[l],Hash("0") ,l ,Chain[l])
-#         else :
-#             status = Check_fail(Merkle_root_check[l],Chain_check[l-1] ,l ,Chain[l])
-
-#         print("Block",l,status)
-
-
-# #=========check===========
 
 def AddBlock(txn) :
     Merkle_root_list.append(Create_Merkle_Root(txn))
@@ -146,14 +98,66 @@ def CheckBlock(index) :
 print("================OK================")
 Create_Genesus_block()
 Create_Data_Block()
-# Check_All_Block()
+Check_All_Block()
 print("\n")
-# print("===========Block2 fail============")
-# Create_Genesus_block_fail()
-# Create_Tx2_fail()
-# Check_Tx2_fail()
-# print(Chain)
-# print(Chain_check)
+
+#=========check===========
+
+def Create_Block_Check(Prev_Hash,Tx_Root) :
+    
+    Index = Hash(str((len(Chain_check))))
+
+    Prev_Hash = Hash(Tx_Root+Prev_Hash+Index)
+
+    #Chain.append(Prev_Hash)
+
+    return Prev_Hash
+    #return f"Create Block %d Succeed" % (len(Chain)-1)
+
+def Check_fail(Tx_Root ,Prev_Hash ,Index ,Prev_Hash_Check):
+    #print("Index",Index)
+    #print("Merkle_root_list_CH",Merkle_root_list[Index])
+    
+    Indexs = Hash(str(Index))
+
+    Prev_Hash = Hash(Tx_Root+Prev_Hash+Indexs)
+
+    #print("Check",Prev_Hash,"=",Prev_Hash_Check)
+    if Prev_Hash == Prev_Hash_Check :
+        return "OK"
+    else :
+        return "Have fix"
+
+def Create_Genesus_block_fail() :
+    str = "Genesus_block"
+    Merkle_root_check.append(Hash(str))
+    Chain_check.append(Create_Block_Check(Hash("0"),Hash(str)))
+    print(f"Create Block %d Succeed" % (len(Chain_check)-1))
+def Create_Tx2_fail():
+    for k in range(0,len(Tx2_fail)):
+        Merkle_root_check.append(Create_Merkle_Root(Tx2_fail[k]))
+        Chain_check.append(Create_Block_Check(Chain_check[k] , Merkle_root_check[k+1]))
+        print(f"Create Block %d Succeed" % (len(Chain_check)-1))
+
+
+def Check_Tx2_fail():
+    for l in range(0,len(Chain_check)):
+        if l == 0 :
+            status = Check_fail(Merkle_root_check[l],Hash("0") ,l ,Chain[l])
+        else :
+            status = Check_fail(Merkle_root_check[l],Chain_check[l-1] ,l ,Chain[l])
+
+        print("Block",l,status)
+
+
+#=========check===========
+
+print("===========Block2 fail============")
+Create_Genesus_block_fail()
+Create_Tx2_fail()
+Check_Tx2_fail()
+print(Chain)
+print(Chain_check)
 
 
 loop = True

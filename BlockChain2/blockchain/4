@@ -1,0 +1,13 @@
+{
+    "group": "A",
+    "number": 3,
+    "team1": "DAMWON Gaming",
+    "team2": "FunPlus Phoenix",
+    "score1": 1,
+    "score2": 0,
+    "prev_block": {
+        "hash": "af27246774a8fca7378649c89b546d5ffc80a9f15c63f3d7fdd4ef5be1ec589a",
+        "filename": "3"
+    },
+    "block_header": "3bc8f27a930457f9aa244bcd94d50feda04862c87302aa2aa2f2511f5351411f"
+}
