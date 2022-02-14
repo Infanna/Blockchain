@@ -1,13 +1,13 @@
 {
-    "group": "B",
-    "number": 3,
-    "team1": "EDward Gaming",
-    "team2": "100 Thieves",
-    "score1": 1,
-    "score2": 0,
+    "group": "C",
+    "number": 2,
+    "team1": "Fnatic",
+    "team2": "Royal Never Give Up",
+    "score1": 0,
+    "score2": 1,
     "prev_block": {
-        "hash": "b46b29e3eaec1556e9a10eed33f7a4d93d4fd669c41bcee621d37437a2df1097",
+        "hash": "f063a4ab544be865344facb3d7eb65b4569ab577f7e62636bf5e7dcf9da1d428",
         "filename": "6"
     },
-    "block_header": "ef8be32d9be557bf72a180e7b93aa8acd772da6e5af41fabbb690e38e7987198"
+    "block_header": "5f31c4aeab4ffa4deb736704249db73c746b034db2ef5f50c35dc00c920f597b"
 }

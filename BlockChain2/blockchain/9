@@ -1,13 +1,13 @@
 {
-    "group": "C",
+    "group": "D",
     "number": 2,
-    "team1": "Fnatic",
-    "team2": "Royal Never Give Up",
+    "team1": "Team Liquid",
+    "team2": "LNG Esports",
     "score1": 0,
     "score2": 1,
     "prev_block": {
-        "hash": "efb32f14c14f1246ad2025eb88a522b4f34d8c2155bd0ffb0fe89ddaed97194b",
+        "hash": "46cb873d7278523862fcd59c8a5298db2d87ce0a472fe39054fef6ff75bec52f",
         "filename": "8"
     },
-    "block_header": "deb09cb0a6173fb2fbe9df678d16466ddedcab9336842c6d4094c57f51f775d6"
+    "block_header": "499f4c52251a78cdb2d5ce8d30bff7dc1d627a8b781da9be6c4a2d143dc7f6bf"
 }

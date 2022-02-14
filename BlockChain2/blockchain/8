@@ -1,13 +1,13 @@
 {
-    "group": "C",
+    "group": "D",
     "number": 1,
-    "team1": "PSG Talon",
-    "team2": "Hanwha Life Esports",
+    "team1": "MAD Lions",
+    "team2": "Gen.G Esports",
     "score1": 1,
     "score2": 0,
     "prev_block": {
-        "hash": "ef8be32d9be557bf72a180e7b93aa8acd772da6e5af41fabbb690e38e7987198",
+        "hash": "5f31c4aeab4ffa4deb736704249db73c746b034db2ef5f50c35dc00c920f597b",
         "filename": "7"
     },
-    "block_header": "efb32f14c14f1246ad2025eb88a522b4f34d8c2155bd0ffb0fe89ddaed97194b"
+    "block_header": "46cb873d7278523862fcd59c8a5298db2d87ce0a472fe39054fef6ff75bec52f"
 }

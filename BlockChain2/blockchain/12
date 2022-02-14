@@ -1,13 +1,13 @@
 {
-    "group": "D",
-    "number": 2,
-    "team1": "Team Liquid",
-    "team2": "LNG Esports",
-    "score1": 0,
-    "score2": 1,
+    "group": "C",
+    "number": 3,
+    "team1": "PSG Talon",
+    "team2": "Royal Never Give Up",
+    "score1": 1,
+    "score2": 0,
     "prev_block": {
-        "hash": "d2407d42ab50bc744eb574d96f3e266179a727b73e83b0177507583b3e4937a4",
+        "hash": "d5f343957678bdd378fe8bee1c52748d9e1c24faf40636bcc0992c03c57e0185",
         "filename": "11"
     },
-    "block_header": "4703df82130493bdd4c19155a68ee853ef7b25742220cf08dd54892686e726a7"
+    "block_header": "c13cec24dfa8dc6ff849b3756895c4d6de6964fbc504969bb54f926ce950eba7"
 }

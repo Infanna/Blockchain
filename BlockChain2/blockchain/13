@@ -6,8 +6,8 @@
     "score1": 1,
     "score2": 0,
     "prev_block": {
-        "hash": "4703df82130493bdd4c19155a68ee853ef7b25742220cf08dd54892686e726a7",
+        "hash": "c13cec24dfa8dc6ff849b3756895c4d6de6964fbc504969bb54f926ce950eba7",
         "filename": "12"
     },
-    "block_header": "57287169a8e06cff92190774a43fb15925b4ba20d31c8a1d9ae3f9cea4ad7174"
+    "block_header": "03aaa44fa005ee489977ada7c3ed18aec749c142a0f97ed50a4631911d70d6a3"
 }

@@ -1,13 +1,13 @@
 {
-    "group": "B",
-    "number": 2,
-    "team1": "DetonatioN FocusMe",
-    "team2": "100 Thieves",
-    "score1": 0,
-    "score2": 1,
+    "group": "C",
+    "number": 1,
+    "team1": "PSG Talon",
+    "team2": "Hanwha Life Esports",
+    "score1": 1,
+    "score2": 0,
     "prev_block": {
-        "hash": "d6a36b4c00308084234b115b404a08e108e53ecc24ba34a7db9b7ff7fe5f144b",
+        "hash": "3f5739828eb640468166e3616f53f91d216802638033c5098c81927e5e6c3e66",
         "filename": "5"
     },
-    "block_header": "b46b29e3eaec1556e9a10eed33f7a4d93d4fd669c41bcee621d37437a2df1097"
+    "block_header": "f063a4ab544be865344facb3d7eb65b4569ab577f7e62636bf5e7dcf9da1d428"
 }

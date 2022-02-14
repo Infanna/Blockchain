@@ -1,13 +1,13 @@
 {
-    "group": "D",
-    "number": 1,
-    "team1": "MAD Lions",
-    "team2": "Gen.G Esports",
+    "group": "B",
+    "number": 3,
+    "team1": "EDward Gaming",
+    "team2": "100 Thieves",
     "score1": 1,
     "score2": 0,
     "prev_block": {
-        "hash": "355b3c3b882b0d30d68423cb7674b0dc065aad1d260a7522e6c0295388e5e36f",
+        "hash": "ff0a68e62a50152c24a8d479df312cc6e93dac02263fecc958e82aa76808d00b",
         "filename": "10"
     },
-    "block_header": "d2407d42ab50bc744eb574d96f3e266179a727b73e83b0177507583b3e4937a4"
+    "block_header": "d5f343957678bdd378fe8bee1c52748d9e1c24faf40636bcc0992c03c57e0185"
 }
