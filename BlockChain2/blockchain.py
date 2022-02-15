@@ -62,21 +62,6 @@ def check_integrity():
                 res = 'was Changed'
             results.append(res)
 
-        if int(file) == len(os.listdir(BLOCKCHAIN_DIR)):
-        
-            datahash = block.get('block_header')
-            checkdata = get_hash_create_data_last(group = block.get('group'), 
-            number = block.get('number'), 
-            team1 = block.get('team1'), 
-            team2 = block.get('team2'), 
-            score1 = block.get('score1'), 
-            score2 = block.get('score2'))
-
-            if datahash == checkdata:
-                res = 'OK'
-            else:
-                res = 'was Changed'
-            results.append(res)
 
     return results
 
